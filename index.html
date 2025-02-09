@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hany Raafat Tammam Elsisy - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #e0f7fa, #e8eaf6);
+            font-family: 'Cairo', sans-serif;
+            font-size: 16px;
+        }
+        .card {
+            background: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 6px solid #1e88e5;
+            transition: all 0.3s ease-in-out;
+            page-break-inside: avoid; /* Prevent page break inside the card */
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        h1, h2 {
+            color: #1e88e5;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        .section-title {
+            background-color: #1e88e5;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: inline-block;
+            font-size: 18px;
+        }
+        .contact-info {
+            background: #f1f1f1;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .contact-info a {
+            color: #1e88e5;
+            text-decoration: underline;
+        }
+        .no-print {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-email {
+            background-color: #1e88e5;
+            color: white;
+        }
+        .button-email:hover {
+            background-color: #1565c0;
+        }
+        .button-pdf {
+            background-color: #4caf50;
+            color: white;
+        }
+        .button-pdf:hover {
+            background-color: #388e3c;
+        }
+        @media print {
+            .no-print, .contact-info {
+                display: none;
+            }
+            .card {
+                page-break-after: always; /* Ensures each card is separated by a page break */
+            }
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+    <div class="max-w-4xl mx-auto p-6" id="cv-content">
+        <div class="text-center mb-6">
+            <h1 class="text-4xl font-extrabold">Hany Raafat Tammam Elsisy</h1>
+            <p class="contact-info">Giza, Egypt | 01011605030 | <a href="mailto:Hany.elsisyss@gmail.com">Hany.elsisyss@gmail.com</a></p>
+        </div>
+
+        <div class="flex justify-center space-x-6 no-print">
+            <a href="mailto:Hany.elsisyss@gmail.com">
+                <button class="button button-email">Send Email</button>
+            </a>
+            <button onclick="downloadPDF()" class="button button-pdf">Download as PDF</button>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Objective</h2>
+            <p>To leverage my extensive experience in human resources, customer service, and business management to contribute to the growth and success of a dynamic organization. I aim to utilize my leadership skills, strategic thinking, and passion for fostering a positive work environment to drive operational excellence and organizational success.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Personal Information</h2>
+            <ul class="list-disc ml-6 mt-2">
+                <li><strong>Nationality:</strong> Egyptian</li>
+                <li><strong>Date of Birth:</strong> May 8, 1975</li>
+                <li><strong>Marital Status:</strong> Married</li>
+                <li><strong>Address:</strong> Giza, Egypt</li>
+                <li><strong>Phone:</strong> 01011605030</li>
+                <li><strong>Driving License:</strong> Yes</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>A dedicated and results-oriented professional with over 15 years of experience in human resources, customer service management, and business operations. Proven ability to lead teams, manage projects, and implement strategies that drive business growth and improve organizational performance. Passionate about mentoring individuals and fostering a productive work culture.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Education</h2>
+            <p class="mt-2"><strong>Industrial Diploma</strong> - 1992<br>
+                <em>El-Meamar Industrial Secondary School, Cairo, Egypt</em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Work Experience</h2>
+            <ul class="list-disc ml-6 mt-2 space-y-3">
+                <li><strong>Self-Employment (2020–Present):</strong> Managing private business operations.
+                    <ul class="list-disc ml-6">
+                        <li>Developing business strategies and managing daily operations.</li>
+                        <li>Ensuring customer satisfaction and business growth.</li>
+                    </ul>
+                </li>
+                <li><strong>Alpha Egypt Company (2015–2020):</strong> Human Resources Manager
+                    <ul class="list-disc ml-6">
+                        <li>Overseeing recruitment, training, employee relations, and compliance with labor laws.</li>
+                        <li>Developing HR policies and procedures to improve efficiency.</li>
+                    </ul>
+                </li>
+                <li><strong>Alpha Egypt Company (2010–2015):</strong> Customer Service Manager
+                    <ul class="list-disc ml-6">
+                        <li>Leading customer service teams to achieve high client satisfaction rates.</li>
+                        <li>Implementing processes to streamline customer support operations.</li>
+                    </ul>
+                </li>
+                <li><strong>Orcheda Company (2009):</strong> Call Center Supervisor
+                    <ul class="list-disc ml-6">
+                        <li>Managing call center staff and optimizing workflows for improved performance.</li>
+                    </ul>
+                </li>
+                <li><strong>Kuwait Food Co. (2008–2009, Kuwait):</strong> Order Receiver
+                    <ul class="list-disc ml-6">
+                        <li>Handling customer orders and ensuring timely service delivery.</li>
+                    </ul>
+                </li>
+                <li><strong>Kuwait Food Co. (2003–2005, UAE):</strong> Call Center Team Member
+                    <ul class="list-disc ml-6">
+                        <li>Providing exceptional support to customers and resolving inquiries efficiently.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Skills</h2>
+            <ul class="list-disc ml-6 mt-2">
+                <li><strong>Languages:</strong> Arabic (Native), English (Good)</li>
+                <li><strong>Technical:</strong> Microsoft Office, Internet Browsing, Network Configuration</li>
+                <li><strong>Leadership & Management:</strong> Team Leadership, Conflict Resolution, Strategic Planning</li>
+                <li><strong>Customer Relationship Management:</strong> Client Engagement, Service Improvement Strategies</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            const cvContent = document.getElementById('cv-content');
+            const buttons = document.querySelectorAll('.no-print');
+
+            // Hide buttons before generating PDF
+            buttons.forEach(button => button.style.display = 'none');
+
+            html2pdf().from(cvContent).set({
+                margin: [10, 10, 10, 10],
+                filename: 'Hany_Raafat_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 3, backgroundColor: '#ffffff' },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            }).save().then(() => {
+                // Restore buttons after download
+                buttons.forEach(button => button.style.display = 'flex');
+            });
+        }
+    </script>
+</body>
+
+</html>
